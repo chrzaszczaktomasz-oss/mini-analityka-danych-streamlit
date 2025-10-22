@@ -14,7 +14,6 @@ def load_data():
     users_df = pd.DataFrame(users)
     posts_df = pd.DataFrame(posts)
 
-    # 🔹 Rozpakowanie adresu
     users_df["full_address"] = users_df["address"].apply(
         lambda x: f"{x['street']}, {x['suite']}, {x['city']} ({x['zipcode']})"
     )
